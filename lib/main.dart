@@ -33,7 +33,12 @@ class HomeScreenState extends State<HomeScreen> {
   void initState() {
     super.initState();
     ShakeToReport.initShakeListener(
-      onSubmit: (ReportFormData formData) {},
+      onSubmit: (ReportFormData formData) {
+
+      },
+      shakeThreshold: 40.0, // Optional: Set the shake sensitivity
+      takeScreenshot: true, // Optional: Enable screenshot capture
+      customScreen: Scaffold() // Optional: your custom report screen
     );
   }
 
